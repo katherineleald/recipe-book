@@ -218,6 +218,10 @@
 <!-- Modal component for displaying detailed meal information -->
 <Modal bind:showModal {selectedMeal} on:close={closeModal} />
 
+<div id="footer" class="w-full p-3 pt-5">
+  <p class="text-center font-['Noto_Sans'] text-[0.85em]">&copy; 2024 Katherine Leal | All Rights Reserved</p>
+</div>
+
 <!-- Styles -->
 <style lang="postcss">
   /* Importing Google Fonts */
