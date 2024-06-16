@@ -76,7 +76,7 @@
 </script>
 
 <!-- Header section with title and alphabet filter buttons -->
-<div id="header" class="mt-3 pb-14">
+<div id="header" class="mt-3 sm:pb-14 pb-2">
   <h1
     id="title"
     class="text-center font-medium text-[#3d5a40] sm:text-7xl text-6xl pb-4 font-['Playball']"
@@ -201,7 +201,7 @@
       {/each}
     {:else}
       <!-- Message that displays when there are no meals with the active letter -->
-      <div class="flex flex-col col-span-full items-center font-['Noto_Sans']">
+      <div class="flex flex-col col-span-full items-center font-['Noto_Sans'] text-center">
         <FontAwesomeIcon
           icon={faFaceSadTear}
           class="w-32 h-32 text-[#3d5a40] mb-5"
@@ -218,7 +218,7 @@
 <!-- Modal component for displaying detailed meal information -->
 <Modal bind:showModal {selectedMeal} on:close={closeModal} />
 
-<div id="footer" class="w-full p-3 pt-5">
+<div id="footer" class="w-full p-3 pt-5 bottom-0">
   <p class="text-center font-['Noto_Sans'] text-[0.85em]">&copy; 2024 Katherine Leal | All Rights Reserved</p>
 </div>
 

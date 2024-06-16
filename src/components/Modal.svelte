@@ -65,7 +65,7 @@
             <div
               class="grid gap-4 grid-col-1 md:grid-cols-2 items-center w-11/12"
             >
-              <div>
+              <div class="font-['Noto_Sans'] ">
                 <h4 class="mt-3">
                   <span class="font-semibold">Category:</span>
                   {selectedMeal.strCategory}
