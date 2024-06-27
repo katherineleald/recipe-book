@@ -49,7 +49,7 @@
         <slot name="header">
           <div
             id="first-column"
-            class="flex-shrink-0 sm:w-1/2 flex flex-col items-center"
+            class="flex-shrink-0 sm:w-1/2 flex flex-col items-center justify-start sm:justify-evenly"
           >
             <h2
               id="recipe__info__title"
@@ -79,7 +79,7 @@
                 <a
                   href={selectedMeal.strYoutube}
                   target="_blank"
-                  class="mt-3 bg-red-500 px-5 py-4 text-white rounded-lg hover:bg-red-800 transition ease-in-out font-['Poppins'] flex items-center"
+                  class="mt-3 bg-red-500 px-5 py-4 text-white rounded-lg hover:bg-red-600 transition ease-in-out font-['Poppins'] flex items-center"
                 >
                   <FontAwesomeIcon icon={faPlayCircle} class="w-5 h-5 me-2" /> Watch
                   Tutorial
@@ -104,9 +104,9 @@
               class="font-['Noto_Sans'] text-[1.05em] my-2"
             >
               <span class="font-semibold text-[20px]">Ingredients:</span>
-              <ul>
+              <ul class="list-disc pl-[20px]">
                 {#each getIngredients(selectedMeal) as { ingredient, measure }}
-                  <li class="list-disc">{measure} of {ingredient}</li>
+                  <li>{measure} of {ingredient}</li>
                 {/each}
               </ul>
             </div>
@@ -167,4 +167,19 @@
       opacity: 1;
     }
   }
+  ::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #f2e9e4;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #3d5a40;
+		border-radius: 5px;
+		border: 1px solid transparent;
+	}
 </style>
